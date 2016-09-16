@@ -1,0 +1,32 @@
+buildscript {
+  dependencies { repositories { jcenter() }
+    classpath('org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE')
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+  baseName = 'spring-boot-stormpath'
+  version = '0.0.1'
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+repositories { jcenter() }
+
+dependencies {
+  compile('org.springframework.boot:spring-boot-starter-actuator')
+  compile('org.springframework.boot:spring-boot-starter-data-mongodb')
+  compile('org.springframework.boot:spring-boot-starter-data-rest')
+  compile('org.springframework.boot:spring-boot-devtools')
+  compile('de.flapdoodle.embed:de.flapdoodle.embed.mongo')
+  compile('org.webjars:webjars-locator:0.32') // use:        /webjars/bootstrap/css/bootstrap.min.css
+  compile('org.webjars:bootstrap:3.3.7-1')    // instead of: /webjars/bootstrap/3.3.7-1/css/bootstrap.min.css
+  compile('org.projectlombok:lombok')
+  compile('org.springframework.boot:spring-boot-starter-mustache')
+  testCompile('org.springframework.boot:spring-boot-starter-test')
+}

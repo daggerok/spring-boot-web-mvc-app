@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      port: 0
+    rest:
+      base-path: /api
+  mustache:
+    suffix: .hbs
+    cache: false
+  application:
+    name: spring-boo-stormpath
+management:
+  context-path: /admin

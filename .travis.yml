@@ -1,0 +1,6 @@
+language: java
+jdk: oraclejdk8
+script: gradle build
+cache.directories:
+  - $HOME/.gradle/
+  - $HOME/.m2/

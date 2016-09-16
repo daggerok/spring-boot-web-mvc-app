@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 @Import({
         RestRepositoryConfig.class,
         WebInterceptorConfig.class })
-public class SpringBootStormpathApplication {
+public class SpringBootWebMvcApplication {
 
     @Bean
     CommandLineRunner testData(ProfileRestRepository profiles) {
@@ -27,6 +27,6 @@ public class SpringBootStormpathApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootStormpathApplication.class, args);
+        SpringApplication.run(SpringBootWebMvcApplication.class, args);
     }
 }

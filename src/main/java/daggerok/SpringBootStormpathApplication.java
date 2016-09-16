@@ -1,5 +1,6 @@
 package daggerok;
 
+import daggerok.config.WebInterceptorConfig;
 import daggerok.config.RestRepositoryConfig;
 import daggerok.data.Profile;
 import daggerok.data.ProfileRestRepository;
@@ -12,7 +13,9 @@ import org.springframework.context.annotation.Import;
 import java.util.stream.Stream;
 
 @SpringBootApplication
-@Import(RestRepositoryConfig.class)
+@Import({
+        RestRepositoryConfig.class,
+        WebInterceptorConfig.class })
 public class SpringBootStormpathApplication {
 
     @Bean

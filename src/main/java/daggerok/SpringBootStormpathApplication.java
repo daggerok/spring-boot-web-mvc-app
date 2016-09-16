@@ -1,7 +1,7 @@
 package daggerok;
 
-import daggerok.config.WebInterceptorConfig;
 import daggerok.config.RestRepositoryConfig;
+import daggerok.config.WebInterceptorConfig;
 import daggerok.data.Profile;
 import daggerok.data.ProfileRestRepository;
 import org.springframework.boot.CommandLineRunner;

@@ -1,5 +1,6 @@
-package daggerok.interceptor;
+package daggerok.web.infrastructure.interceptor;
 
+import daggerok.web.infrastructure.Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.ModelMap;
@@ -20,10 +21,7 @@ public class ContextPathInterceptor implements WebRequestInterceptor {
 
     @PostConstruct
     public void init() {
-
-        ctx = Optional.ofNullable(servletContext)
-                .map(ServletContext::getContextPath)
-                .orElse("");
+        ctx = Util.ctx(servletContext);
     }
 
 
